@@ -1,5 +1,6 @@
-import { Client } from './client.interface'
+import { Client, PartialClient } from './client.interface'
 
 export {
-  Client
+  Client,
+  PartialClient
 }

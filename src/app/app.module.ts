@@ -5,6 +5,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { routerModule } from './router.module';
 import { CreateClientComponent } from './create-client/create-client.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CreateClientComponent
   ],
   imports: [
-    BrowserModule, routerModule, ReactiveFormsModule
+    BrowserModule, routerModule, ReactiveFormsModule, HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

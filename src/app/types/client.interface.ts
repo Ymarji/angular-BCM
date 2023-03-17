@@ -6,3 +6,5 @@ export interface Client {
   gender: string;
   address: string;
 }
+
+export type PartialClient = Partial<Client>
