@@ -15,21 +15,33 @@
     </div>
 
     <div class="flex flex-col gap-1">
-      <span>Gendre *</span>
-      <div class="flex flex-row items-center gap-4">
-        <input type="radio" id="male-radio"  name="gender" formControlName="gender" value="Male">
-        <label for="">Male</label>
-      </div>
-      <div class="flex flex-row items-center gap-4">
-        <input type="radio" id="female-radio" name="gender" formControlName="gender" value="Female">
-        <label for="">Female</label>
-      </div>
-    </div>
-    <div class="flex flex-col gap-1">
       <label for="address">address</label>
       <input type="text" id="address" placeholder="address" formControlName="address" class="basic-input-text" [ngClass]="isRequired('address')?'border-red-500': 'border'">
     </div>
-    <button type="submit" class="basic-button-submit disabled:cursor-not-allowed disabled:opacity-25" [disabled]="addClientForm.invalid">Create</button>
+
+    <div class="flex flex-row justify-between items-center w-full">
+      <span>Gendre *</span>
+      <div class="flex flex-row items-center gap-2 w-1/2 text-center">
+        <input type="radio" id="male-radio"  name="gender" formControlName="gender" value="Male" class="hidden peer/mal">
+        <label for="male-radio" class="check-box-box peer-checked/mal:bg-gray-200">Male</label>
+
+        <input type="radio" id="female-radio" name="gender" formControlName="gender" value="Female" class="hidden peer/fel">
+        <label for="female-radio" class="check-box-box peer-checked/fel:bg-gray-200">Female</label>
+      </div>
+    </div>
+
+    <div class="flex flex-row justify-between items-center w-full">
+      <span>Account type *</span>
+      <div class="flex flex-row items-center gap-2 w-1/2 text-center">
+        <input type="radio" id="saving"  name="types" value="saving" class="hidden peer/sav">
+        <label for="saving" class="check-box-box peer-checked/sav:bg-gray-200">saving</label>
+
+        <input type="radio" id="checking"  name="types" value="checking" class="hidden peer/che">
+        <label for="checking" class="check-box-box peer-checked/che:bg-gray-200">checking</label>
+      </div>
+    </div>
+
+    <button type="submit" class="basic-button-submit disabled:cursor-not-allowed disabled:opacity-25" [disabled]="addClientForm.invalid || isLoading">Create</button>
 
   </form>
 </div>

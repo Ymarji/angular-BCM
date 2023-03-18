@@ -14,6 +14,7 @@ import { ClientService } from '../client.service';
 })
 export class CreateClientComponent {
   addClientForm: FormGroup;
+  isLoading: boolean=  false;
 
   constructor(private _formBuilder: FormBuilder, private _clientService: ClientService) {
     this.addClientForm = this._formBuilder.group({
@@ -21,14 +22,17 @@ export class CreateClientComponent {
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       gender: ['Male'],
+      types: ['savings'],
       address: ['', [Validators.required]],
     });
   }
 
   onSubmit() {
     this.addClientForm.value.id = uuidv4()
+    this.isLoading = true
     this._clientService.addClient(this.addClientForm.value).subscribe((ret) => {
-      console.log(ret);
+      this.addClientForm.reset()
+      this.isLoading = false;
     });
   }
 

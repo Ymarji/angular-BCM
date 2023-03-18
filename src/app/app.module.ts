@@ -4,17 +4,23 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { routerModule } from './router.module';
 import { CreateClientComponent } from './create-client/create-client.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ListingClientComponent } from './listing-client/listing-client.component';
+import { TableComponent } from './table/table.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    CreateClientComponent
+    CreateClientComponent,
+    ListingClientComponent,
+    TableComponent,
+    SearchBarComponent
   ],
   imports: [
-    BrowserModule, routerModule, ReactiveFormsModule, HttpClientModule,
+    BrowserModule, routerModule, ReactiveFormsModule, HttpClientModule, FormsModule
 
   ],
   providers: [],

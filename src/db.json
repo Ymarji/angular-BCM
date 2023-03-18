@@ -255,6 +255,22 @@
       "gender": "Male",
       "address": "426 hay elphosphate boulanoire khouribga",
       "id": "065d1eb4-1331-4ddc-817e-aaf183738b2a"
+    },
+    {
+      "firstName": "loti",
+      "lastName": "lotos",
+      "email": "fadaimc@gmail.com",
+      "gender": "Male",
+      "address": "toto",
+      "id": "2d7e8b49-08eb-4acb-8695-39f31881a52a"
+    },
+    {
+      "firstName": "tetet",
+      "lastName": "toto",
+      "email": "youssef.marji.contact@gmail.com",
+      "gender": "Male",
+      "address": "426 hay elphosphate boulanoire khouribga",
+      "id": "6852313c-c700-4f1b-a630-95080a077a1e"
     }
   ]
 }

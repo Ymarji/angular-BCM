@@ -14,11 +14,15 @@ export class ClientService {
     private _http: HttpClient
   ) { }
 
-  getClients(): Observable<Client> {
-    return this._http.get<Client>(BASE_URL)
+  getClients(): Observable<Client[]> {
+    return this._http.get<Client[]>(BASE_URL)
   }
 
   addClient(client: PartialClient) {
     return this._http.post<Client>(BASE_URL, client)
+  }
+
+  searchClientByName(query: string) {
+
   }
 }
