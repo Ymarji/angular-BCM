@@ -19,6 +19,19 @@
       <input type="text" id="address" placeholder="address" formControlName="address" class="basic-input-text" [ngClass]="isRequired('address')?'border-red-500': 'border'">
     </div>
 
+    <div class="flex flex-col gap-1">
+      <label for="acc-num">Account number</label>
+      <input type="text" id="acc-num" formControlName="accountNumber" class="basic-input-text font-medium">
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <label for="Balance">Balance </label>
+      <div class="flex flex-row items-center gap-1">
+        <input type="number" id="Balance" formControlName="balance" class="grow basic-input-text font-medium">
+        <span class="font-medium">MAD</span>
+      </div>
+    </div>
+
     <div class="flex flex-row justify-between items-center w-full">
       <span>Gendre *</span>
       <div class="flex flex-row items-center gap-2 w-1/2 text-center">
@@ -33,10 +46,10 @@
     <div class="flex flex-row justify-between items-center w-full">
       <span>Account type *</span>
       <div class="flex flex-row items-center gap-2 w-1/2 text-center">
-        <input type="radio" id="saving"  name="types" value="saving" class="hidden peer/sav">
+        <input type="radio" id="saving"  name="types" formControlName="types" value="saving" class="hidden peer/sav">
         <label for="saving" class="check-box-box peer-checked/sav:bg-gray-200">saving</label>
 
-        <input type="radio" id="checking"  name="types" value="checking" class="hidden peer/che">
+        <input type="radio" id="checking"  name="types" formControlName="types" value="checking" class="hidden peer/che">
         <label for="checking" class="check-box-box peer-checked/che:bg-gray-200">checking</label>
       </div>
     </div>

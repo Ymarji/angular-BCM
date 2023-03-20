@@ -1,3 +1,15 @@
-<label>
-  <input type="text" (input)="onChange($event)">
+<label class="flex flex-row">
+  <a (click)="onHideClick()" class="px-4 flex items-center justify-center font-medium cursor-pointer">
+    <!-- <span class="px-4 py-2 border border-gray-300 rounded-lg">
+      {{ !initTrigger ? "Show" : "Hide" }}
+    </span> -->
+    <fa-icon *ngIf="initTrigger === true" [icon]="faArrowLeft"></fa-icon>
+    <fa-icon *ngIf="initTrigger === false" [icon]="faArrowRight"></fa-icon>
+  </a>
+  <input
+    type="text"
+    class="grow basic-input-text m-4 border-black"
+    (input)="onChange($event)"
+    placeholder="Search by Name, account number"
+  />
 </label>

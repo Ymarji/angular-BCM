@@ -23,6 +23,6 @@ export class ClientService {
   }
 
   searchClientByName(query: string) {
-
+    return this._http.get<Client[]>(BASE_URL + '?q=' + query)
   }
 }

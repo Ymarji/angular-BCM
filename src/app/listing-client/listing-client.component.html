@@ -1,4 +1,4 @@
 <div>
-  <app-search-bar (querySearch)="querySearch($event)"></app-search-bar>
+  <app-search-bar (querySearch)="onQuery($event)" (trigger)="onClick()"></app-search-bar>
   <app-table [headers]="clientProp" [data]="clients"></app-table>
 </div>

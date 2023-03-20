@@ -1,8 +1,8 @@
-<div class="grid grid-cols-4 h-full">
+<div class="grid grid-cols-4 h-full xl:grid-cols-5">
   <!-- navigation -->
-  <app-navigation></app-navigation>
+  <app-navigation [ngClass]="{'hidden': !isVisible}" [isVisible]="isVisible" (visibleClick)="onVisibleControl()"></app-navigation>
   <!-- dashboard -->
-  <div class="col-start-2 col-end-5">
+  <div [ngClass]="(isVisible)? 'col-start-2': 'col-start-1'" class=" col-end-5 lg:col-end-6">
     <router-outlet></router-outlet>
   </div>
 </div>

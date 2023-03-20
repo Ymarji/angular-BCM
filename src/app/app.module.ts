@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListingClientComponent } from './listing-client/listing-client.component';
 import { TableComponent } from './table/table.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     SearchBarComponent
   ],
   imports: [
-    BrowserModule, routerModule, ReactiveFormsModule, HttpClientModule, FormsModule
+    BrowserModule, routerModule, ReactiveFormsModule, HttpClientModule, FormsModule,FontAwesomeModule
 
   ],
   providers: [],

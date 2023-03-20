@@ -1,5 +1,5 @@
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <table class="table-auto w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <tr>
             <th *ngFor="let header of headers" scope="col" class="px-6 py-3">
@@ -11,21 +11,27 @@
     <tbody>
       <tr *ngFor="let elm of data; let i = index" class="bg-white border-b dark:bg-gray-900 dark:border-gray-700" [ngClass]="{'bg-gray-100': i % 2 === 1}">
         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-            {{elm.firstName}}
+          {{elm.accountNumber}}
         </th>
-        <td class="px-6 py-4">
-          {{elm.lastName}}
-        </td>
-        <td class="px-6 py-4">
-          {{elm.email}}
-
-        </td>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+            {{elm.firstName + ' ' + elm.lastName}}
+        </th>
         <td class="px-6 py-4">
           {{elm.gender}}
         </td>
-        <td class="px-6 py-4">
+        <td class="px-6 py-4 ">
+          {{elm.balance}} MAD
+
+        </td>
+        <td class="px-6 py-4 max-w-0 truncate" [title]="elm.email">
+          {{elm.email}}
+        </td>
+        <td class="px-6 py-4 max-w-0 truncate" [title]="elm.address">
           {{elm.address}}
-      </td>
+        </td>
+        <td class="px-6 py-4 truncate">
+          {{elm.types}}
+        </td>
         <td class="px-6 py-4">
             <a [routerLink]="'update/' + elm.id" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
         </td>

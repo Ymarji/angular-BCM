@@ -5,6 +5,8 @@ export interface Client {
   email: string;
   gender: string;
   address: string;
+  accountType: string;
+  accountNumber: string;
 }
 
 export type PartialClient = Partial<Client>

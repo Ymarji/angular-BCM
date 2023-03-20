@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
+  @Input() isVisible: boolean = true;
+  @Output() visibleClick = new EventEmitter()
+
+  onClick(){
+    this.visibleClick.emit()
+  }
 }

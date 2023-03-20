@@ -6,7 +6,7 @@ import { ListingClientComponent } from './listing-client/listing-client.componen
 const routes: Routes = [
   {
     path: 'add-client',
-    component: CreateClientComponent,
+    component: CreateClientComponent
   },
   {
     path: 'list',
