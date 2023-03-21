@@ -5,8 +5,9 @@ export interface Client {
   email: string;
   gender: string;
   address: string;
-  accountType: string;
+  types: string;
   accountNumber: string;
+  balance: number;
 }
 
 export type PartialClient = Partial<Client>

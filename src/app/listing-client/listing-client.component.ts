@@ -55,4 +55,10 @@ export class ListingClientComponent implements OnInit {
   onQuery(event: any) {
     this.searchQuerySubject.next(event.target.value);
   }
+
+  deleteClient(elm: Client) {
+    this._clientService.deleteClient(elm.id).subscribe(() => {
+      this.clients = this.clients.filter((value) => value.id !== elm.id)
+    });
+  }
 }

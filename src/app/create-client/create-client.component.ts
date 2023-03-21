@@ -6,6 +6,7 @@ import {
 } from '@angular/forms';
 import { v4 as uuidv4 } from 'uuid';
 import { ClientService } from '../client.service';
+import { Client } from '../types';
 
 @Component({
   selector: 'app-create-client',

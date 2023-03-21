@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Client } from '../types';
 
 @Component({
@@ -9,5 +9,10 @@ import { Client } from '../types';
 export class TableComponent {
   @Input() headers: string[] = [];
   @Input() data: any[] = [];
+  @Output() deleteClient = new EventEmitter();
+
+  onDelete(elm: Client) {
+    this.deleteClient.emit(elm)
+  }
 
 }

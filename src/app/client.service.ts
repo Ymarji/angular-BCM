@@ -25,4 +25,15 @@ export class ClientService {
   searchClientByName(query: string) {
     return this._http.get<Client[]>(BASE_URL + '?q=' + query)
   }
+  findOnd(id: string) {
+    return this._http.get<Client>(BASE_URL+ '/' + id)
+  }
+
+  updatePokemon(value: Client) {
+    return this._http.put<Client>(BASE_URL + '/' + value.id, value);
+  }
+
+  deleteClient(id: string) {
+    return this._http.delete(BASE_URL+ '/' + id);
+  }
 }

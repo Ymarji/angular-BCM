@@ -1,6 +1,6 @@
 <div>
-  <h3 class="text-center pt-4 text-xl font-medium"> please insert all new client necessary data</h3>
-  <form [formGroup]="addClientForm" class=" flex flex-col gap-4 mx-auto w-1/2 mt-6" (ngSubmit)="onSubmit()">
+  <h3 class="text-center pt-4 text-xl font-medium"> update client data</h3>
+  <form [formGroup]="updateClientForm" class=" flex flex-col gap-4 mx-auto w-1/2 mt-6" (ngSubmit)="onSubmit()">
     <div class="flex flex-col gap-1">
       <label for="firstName">First name *</label>
       <input type="text" id="firstName" formControlName="firstName" placeholder="First name" class="basic-input-text" [ngClass]="isRequired('firstName')?'border-red-500': 'border'">
@@ -10,7 +10,7 @@
     </div>
 
     <div class="flex flex-col gap-1">
-      <label for="email">Email * <span class="" [ngClass]="this.addClientForm.get('email')?.invalid && this.addClientForm.get('email')?.touched ?'text-red-500 visible block': 'invisible inline'">please enter valide email</span></label>
+      <label for="email">Email * <span class="" [ngClass]="this.updateClientForm.get('email')?.invalid && this.updateClientForm.get('email')?.touched ?'text-red-500 visible block': 'invisible inline'">please enter valide email</span></label>
       <input type="email" id="email" placeholder="email" formControlName="email" class="basic-input-text" [ngClass]="isRequired('email')?'border-red-500': 'border'">
     </div>
 
@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <button type="submit" class="basic-button-submit disabled:cursor-not-allowed disabled:opacity-25" [disabled]="addClientForm.invalid || isLoading">Save</button>
+    <button type="submit" class="basic-button-submit disabled:cursor-not-allowed disabled:opacity-25" [disabled]="updateClientForm.invalid || isLoading">Save</button>
 
   </form>
 </div>

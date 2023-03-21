@@ -1,6 +1,9 @@
-<nav [ngClass]="{'hidden': !isVisible}" class="pt-8 bg-gray-300 h-full font-medium text-base">
+<nav [ngClass]="{'hidden': !isVisible}" class="pt-8 bg-gray-300 h-full font-medium text-base border border-r-black">
   <!-- <button (click)="onClick()">hide</button> -->
   <ul class="flex flex-col cursor-pointer">
+    <li [routerLink]="['']" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="bg-gray-400" class="p-4 hover:bg-gray-400 hover:text-white transition-colors duration-100">
+      <a routerLink=""> Home </a>
+    </li>
     <li [routerLink]="['add-client']" routerLinkActive="bg-gray-400" class="p-4 hover:bg-gray-400 hover:text-white transition-colors duration-100">
       <a routerLink="add-client"> Create new customer</a>
     </li>
