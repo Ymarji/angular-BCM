@@ -32,10 +32,10 @@
         <td class="px-6 py-4 truncate">
           {{elm.types}}
         </td>
-        <td class="px-6 py-4">
+        <td class="px-6 py-4 flex justify-evenly gap-2">
             <a [routerLink]="'update/' + elm.id" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
             {{' | '}}
-            <button class="font-medium text-blue-600 dark:text-blue-500 hover:underline" (click)="onDelete(elm)">Delete</button>
+            <button class="font-medium text-blue-600 dark:text-blue-500 hover:underline px-2" title="Delete" (click)="onDelete(elm)"><fa-icon [icon]="faDelete"/></button>
         </td>
     </tr>
     </tbody>

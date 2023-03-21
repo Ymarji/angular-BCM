@@ -36,4 +36,6 @@ export class ClientService {
   deleteClient(id: string) {
     return this._http.delete(BASE_URL+ '/' + id);
   }
+
+
 }

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Client } from '../types';
+import { faDeleteLeft, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-table',
@@ -11,8 +12,9 @@ export class TableComponent {
   @Input() data: any[] = [];
   @Output() deleteClient = new EventEmitter();
 
+  faDelete = faTrash;
+
   onDelete(elm: Client) {
     this.deleteClient.emit(elm)
   }
-
 }
