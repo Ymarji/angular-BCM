@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit{
     this._clientService.getClients().subscribe((ret) => {
       this.client = ret;
       this.clientNumber = ret.length
-      this.netWorth = ret.reduce((sum, val) => { return sum += val.balance}, 0)
+      this.netWorth = ret.reduce((sum, val) => { return sum += (+val.balance)}, 0)
     })
 	}
 
